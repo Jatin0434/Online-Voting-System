@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Candidate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            padding-top: 56px; /* Adjust for navbar height */
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            background-color: #007bff; /* Blue color */
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            text-decoration: underline;
+            color: #ffdd57 !important;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #007bff;
+        }
+
+        .form-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .form-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            border: 2px solid #007bff;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .side-image {
+            width: 40%;
+            border-radius: 10px;
+        }
+
+        /* Logo styling */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo .flag {
+            width: 50px;
+            height: 30px;
+            border-radius: 5px;
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .logo .flag .stripe {
+            height: 10px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+
+        .logo .flag .stripe:nth-child(1) {
+            background-color: #ff9933;
+            top: 0;
+        }
+
+        .logo .flag .stripe:nth-child(2) {
+            background-color: #ffffff;
+            top: 10px;
+        }
+
+        .logo .flag .stripe:nth-child(3) {
+            background-color: #138808;
+            top: 20px;
+        }
+
+        .logo .flag .ashoka-chakra {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo .flag .ashoka-chakra:before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <div class="logo">
+                <div class="flag">
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="ashoka-chakra"></div>
+                </div>
+                <div class="text">eMatdaan</div>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="heading">Add Candidate for Election</div>
+        <div class="form-container">
+            <!-- Form Box -->
+            <div class="form-box">
+                <form>
+                    <div class="form-group">
+                        <label for="candidateName">Candidate Name:</label>
+                        <input type="text" class="form-control" id="candidateName" placeholder="Enter candidate name">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Select Photo:</label>
+                        <input type="file" class="form-control-file" id="photo">
+                    </div>
+                    <div class="form-group">
+                        <label for="partyName">Party Name:</label>
+                        <input type="text" class="form-control" id="partyName" placeholder="Enter party name">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Select Symbol:</label>
+                        <input type="file" class="form-control-file" id="photo">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Add Candidate</button>
+                </form>
+            </div>
+            
+            <!-- Side Image -->
+            <img src="https://knowledge.wharton.upenn.edu/wp-content/uploads/2016/08/voter-app.jpg" alt="Voter App" class="side-image">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

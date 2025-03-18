@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page - Online Voting System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #007bff; /* Blue color */
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff !important; /* White color for the links */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #d1d1d1 !important; /* Light grey color on hover */
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .logo .flag {
+            width: 50px;
+            height: 30px;
+            border-radius: 5px;
+            position: relative;
+            margin-right: 10px;
+        }
+        .logo .flag .stripe {
+            height: 10px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+        .logo .flag .stripe:nth-child(1) {
+            background-color: #ff9933; /* Orange */
+            top: 0;
+        }
+        .logo .flag .stripe:nth-child(2) {
+            background-color: #ffffff; /* White */
+            top: 10px;
+        }
+        .logo .flag .stripe:nth-child(3) {
+            background-color: #138808; /* Green */
+            top: 20px;
+        }
+        .logo .flag .ashoka-chakra {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo .flag .ashoka-chakra:before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #000;
+        }
+        .btn-admin-login {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .btn-admin-login:hover {
+            background-color: #cc0000;
+        }
+        .split-screen {
+            display: flex;
+            flex-direction: column; /* Change to column layout */
+            height: 100vh;
+        }
+        .red-section {
+            background-color: #ff0000;
+            height: 50vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .white-section {
+            background-color: #fff;
+            color: #000;
+            height: 50vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .white-section .voting-options {
+            display: flex;
+            justify-content: space-between;
+        }
+        .user-details img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <div class="logo">
+                <div class="flag">
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="ashoka-chakra"></div>
+                </div>
+                <div class="text">eMatdaan</div>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-admin-login ml-2" href="admin.html">Admin Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Split Screen Layout -->
+    <div class="split-screen">
+        <!-- Red Section (Top Half) -->
+        <div class="red-section">
+            <h1>Welcome to the Online Voting System</h1>
+            <p>An online voting system is a software platform that allows groups to securely conduct votes and elections. High-quality online voting systems balance ballot security, accessibility, and the overall requirements of an organization's voting event.</p>
+        </div>
+
+        <!-- White Section (Bottom Half) -->
+        <div class="white-section">
+            <div class="voting-options">
+                <!-- Voting options or other content can be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
